@@ -26,7 +26,7 @@ LIVENESS_DATA_DIR = 'data/liveness_data'
 # where trained models are saved
 MODEL_SAVE_DIR = 'saved_models'
 
-# emotion class labels (FER2013 order)
+# emotion class labels (matches sorted emotion folder names)
 EMOTION_CLASSES = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
 NUM_EMOTIONS = 7
 

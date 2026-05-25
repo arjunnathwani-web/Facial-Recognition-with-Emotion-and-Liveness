@@ -28,7 +28,15 @@ data/
     val/fake/*.jpg
 ```
 
-For emotion detection, download FER2013 from Kaggle and restructure it into the above folders.
+For emotion detection, download FER2013 from Kaggle and convert it into folders:
+
+```bash
+python prepare_fer2013.py --csv data/fer2013.csv --out data/emotion_data
+```
+
+This creates `train/`, `val/`, and `test/` folders. If you want to merge FER2013
+PrivateTest into the validation folder, add `--private-test-to-val`.
+
 For liveness, use LCC FASD or CelebA-Spoof datasets.
 
 ## Training

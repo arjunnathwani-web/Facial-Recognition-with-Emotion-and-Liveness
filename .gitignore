@@ -1,0 +1,32 @@
+# Datasets and generated training assets
+data/**
+!data/
+!data/.gitkeep
+!data/classification_data/
+!data/classification_data/.gitkeep
+!data/verification_data/
+!data/verification_data/.gitkeep
+!data/emotion_data/
+!data/emotion_data/.gitkeep
+!data/liveness_data/
+!data/liveness_data/.gitkeep
+saved_models/**
+!saved_models/
+!saved_models/.gitkeep
+roc_curves.png
+
+# Local runtime files
+face_database.json
+attendance_log.csv
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Logs and OS/editor noise
+*.log
+*.tmp
+.DS_Store
