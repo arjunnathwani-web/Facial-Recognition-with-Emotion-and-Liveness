@@ -1,7 +1,7 @@
 """
 Train the emotion detection model.
 7-class classification: Angry, Disgust, Fear, Happy, Neutral, Sad, Surprise.
-Uses FER2013 or similar publicly available dataset.
+Uses FER2013 dataset. Weighted cross-entropy handles class imbalance.
 """
 
 import os
@@ -13,6 +13,18 @@ from torch.utils.data import DataLoader
 from models import EmotionNet
 from datasets import EmotionDataset, emotion_train_transform, emotion_val_transform
 import config
+
+
+def compute_class_weights(dataset, num_classes, device):
+    counts = torch.zeros(num_classes)
+    for _, label in dataset.samples:
+        counts[label] += 1
+    # inverse frequency weighting
+    weights = counts.sum() / (num_classes * counts)
+    print("Class weights:")
+    for i, (cls, w) in enumerate(zip(dataset.classes, weights)):
+        print(f"  {cls}: count={int(counts[i])}, weight={w:.4f}")
+    return weights.to(device)
 
 
 def train_epoch(model, loader, optimizer, criterion, device):
@@ -66,15 +78,16 @@ def main():
 
     print(f"Train: {len(train_set)} samples, Val: {len(val_set)} samples")
 
-    # larger batch size for emotion since images are small (48x48)
     train_loader = DataLoader(train_set, batch_size=64, shuffle=True, num_workers=4, pin_memory=True)
     val_loader = DataLoader(val_set, batch_size=64, shuffle=False, num_workers=4, pin_memory=True)
 
+    # compute weights from actual dataset counts to handle class imbalance
+    weights = compute_class_weights(train_set, config.NUM_EMOTIONS, device)
+    criterion = nn.CrossEntropyLoss(weight=weights)
+
     model = EmotionNet(num_classes=config.NUM_EMOTIONS).to(device)
-    criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=1e-4)
-    # reduce lr when val loss plateaus
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', patience=5, factor=0.5, verbose=True)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', patience=5, factor=0.5)
 
     os.makedirs(config.MODEL_SAVE_DIR, exist_ok=True)
     best_val_acc = 0.0
