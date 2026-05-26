@@ -28,16 +28,37 @@ data/
     val/fake/*.jpg
 ```
 
-For emotion detection, download FER2013 from Kaggle and convert it into folders:
+For emotion detection, download FER2013 from Kaggle:
+
+https://www.kaggle.com/datasets/msambare/fer2013
+
+If using the folder version with `train/` and `test/` folders:
+
+```bash
+python prepare_fer2013.py --source-dir FER-2013 --out data/emotion_data
+```
+
+If using the CSV version:
 
 ```bash
 python prepare_fer2013.py --csv data/fer2013.csv --out data/emotion_data
 ```
 
-This creates `train/`, `val/`, and `test/` folders. If you want to merge FER2013
-PrivateTest into the validation folder, add `--private-test-to-val`.
+The folder version maps `test/` to `val/` because `train_emotion.py` expects
+`data/emotion_data/val`.
 
-For liveness, use LCC FASD or CelebA-Spoof datasets.
+For liveness, use LCC FASD:
+
+https://www.kaggle.com/datasets/faber24/lcc-fasd
+
+Prepare it with:
+
+```bash
+python prepare_lcc_fasd.py --source-dir "Large Crowdcollected Face Anti-Spoofing Dataset/LCC_FASD" --out data/liveness_data
+```
+
+For a quick local smoke test, add `--sample-per-class 100`. Full liveness
+training should use the complete prepared folders.
 
 ## Training
 
@@ -90,5 +111,7 @@ python main.py
 | train_metric.py | Triplet loss training |
 | train_antispoofing.py | Liveness detection training |
 | train_emotion.py | Emotion detection training |
+| prepare_fer2013.py | FER2013 dataset folder/CSV preparation |
+| prepare_lcc_fasd.py | LCC FASD liveness dataset preparation |
 | evaluate.py | ROC/AUC evaluation |
 | main.py | Tkinter GUI attendance application |

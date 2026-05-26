@@ -15,6 +15,12 @@ saved_models/**
 !saved_models/.gitkeep
 roc_curves.png
 
+# Local raw Kaggle downloads
+FER-2013/
+Large Crowdcollected Face Anti-Spoofing Dataset/
+11-785-fall-20-homework-2-part-2/
+*.zip
+
 # Local runtime files
 face_database.json
 attendance_log.csv
