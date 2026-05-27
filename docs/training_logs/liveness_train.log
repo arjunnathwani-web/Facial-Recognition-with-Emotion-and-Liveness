@@ -1,0 +1,40 @@
+Using device: cuda
+Liveness dataset (train): 8299 samples
+Liveness dataset (val): 2948 samples
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+Epoch 01/30 | Train Loss: 0.1850, Acc: 0.9261 | Val Loss: 0.3175, Acc: 0.8762
+  -> Saved new best model (val acc: 0.8762)
+Epoch 02/30 | Train Loss: 0.0973, Acc: 0.9664 | Val Loss: 0.3251, Acc: 0.8782
+  -> Saved new best model (val acc: 0.8782)
+Epoch 03/30 | Train Loss: 0.0722, Acc: 0.9767 | Val Loss: 0.1124, Acc: 0.9671
+  -> Saved new best model (val acc: 0.9671)
+Epoch 04/30 | Train Loss: 0.0679, Acc: 0.9752 | Val Loss: 0.3271, Acc: 0.8915
+Epoch 05/30 | Train Loss: 0.0557, Acc: 0.9808 | Val Loss: 0.2167, Acc: 0.9203
+Epoch 06/30 | Train Loss: 0.0481, Acc: 0.9831 | Val Loss: 0.1536, Acc: 0.9501
+Epoch 07/30 | Train Loss: 0.0520, Acc: 0.9824 | Val Loss: 0.2389, Acc: 0.9101
+Epoch 08/30 | Train Loss: 0.0491, Acc: 0.9840 | Val Loss: 0.2144, Acc: 0.9332
+Epoch 09/30 | Train Loss: 0.0399, Acc: 0.9867 | Val Loss: 0.2346, Acc: 0.9277
+Epoch 10/30 | Train Loss: 0.0421, Acc: 0.9840 | Val Loss: 0.1582, Acc: 0.9464
+Epoch 11/30 | Train Loss: 0.0283, Acc: 0.9899 | Val Loss: 0.2007, Acc: 0.9325
+Epoch 12/30 | Train Loss: 0.0219, Acc: 0.9924 | Val Loss: 0.1750, Acc: 0.9427
+Epoch 13/30 | Train Loss: 0.0145, Acc: 0.9947 | Val Loss: 0.2672, Acc: 0.9220
+Epoch 14/30 | Train Loss: 0.0172, Acc: 0.9947 | Val Loss: 0.2281, Acc: 0.9440
+Epoch 15/30 | Train Loss: 0.0276, Acc: 0.9902 | Val Loss: 0.1753, Acc: 0.9383
+Epoch 16/30 | Train Loss: 0.0192, Acc: 0.9933 | Val Loss: 0.1095, Acc: 0.9695
+  -> Saved new best model (val acc: 0.9695)
+Epoch 17/30 | Train Loss: 0.0189, Acc: 0.9937 | Val Loss: 0.1621, Acc: 0.9474
+Epoch 18/30 | Train Loss: 0.0198, Acc: 0.9935 | Val Loss: 0.1646, Acc: 0.9474
+Epoch 19/30 | Train Loss: 0.0150, Acc: 0.9951 | Val Loss: 0.1997, Acc: 0.9505
+Epoch 20/30 | Train Loss: 0.0173, Acc: 0.9942 | Val Loss: 0.2428, Acc: 0.9322
+Epoch 21/30 | Train Loss: 0.0123, Acc: 0.9958 | Val Loss: 0.1698, Acc: 0.9471
+Epoch 22/30 | Train Loss: 0.0104, Acc: 0.9965 | Val Loss: 0.2086, Acc: 0.9430
+Epoch 23/30 | Train Loss: 0.0103, Acc: 0.9969 | Val Loss: 0.1332, Acc: 0.9620
+Epoch 24/30 | Train Loss: 0.0129, Acc: 0.9959 | Val Loss: 0.2020, Acc: 0.9447
+Epoch 25/30 | Train Loss: 0.0113, Acc: 0.9958 | Val Loss: 0.1852, Acc: 0.9430
+Epoch 26/30 | Train Loss: 0.0097, Acc: 0.9965 | Val Loss: 0.1391, Acc: 0.9545
+Epoch 27/30 | Train Loss: 0.0075, Acc: 0.9975 | Val Loss: 0.1861, Acc: 0.9461
+Epoch 28/30 | Train Loss: 0.0103, Acc: 0.9967 | Val Loss: 0.1502, Acc: 0.9590
+Epoch 29/30 | Train Loss: 0.0091, Acc: 0.9966 | Val Loss: 0.1884, Acc: 0.9454
+Epoch 30/30 | Train Loss: 0.0107, Acc: 0.9964 | Val Loss: 0.1282, Acc: 0.9596
+
+Done. Best val accuracy: 0.9695

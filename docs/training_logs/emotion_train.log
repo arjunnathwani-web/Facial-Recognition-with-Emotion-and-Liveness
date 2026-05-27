@@ -1,0 +1,92 @@
+Using device: cuda
+Emotion classes: ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
+Emotion classes: ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
+Train: 28709 samples, Val: 7178 samples
+Class weights:
+  angry: count=3995, weight=1.0266
+  disgust: count=436, weight=9.4066
+  fear: count=4097, weight=1.0010
+  happy: count=7215, weight=0.5684
+  neutral: count=4965, weight=0.8260
+  sad: count=4830, weight=0.8491
+  surprise: count=3171, weight=1.2934
+Epoch 01/50 | Train Loss: 1.9954, Acc: 0.1819 | Val Loss: 1.8785, Acc: 0.2371
+  -> Saved new best model (val acc: 0.2371)
+Epoch 02/50 | Train Loss: 1.8704, Acc: 0.2471 | Val Loss: 1.7668, Acc: 0.2658
+  -> Saved new best model (val acc: 0.2658)
+Epoch 03/50 | Train Loss: 1.8400, Acc: 0.2505 | Val Loss: 1.7210, Acc: 0.3254
+  -> Saved new best model (val acc: 0.3254)
+Epoch 04/50 | Train Loss: 1.8088, Acc: 0.2726 | Val Loss: 1.7177, Acc: 0.3639
+  -> Saved new best model (val acc: 0.3639)
+Epoch 05/50 | Train Loss: 1.7759, Acc: 0.2828 | Val Loss: 1.6897, Acc: 0.3345
+Epoch 06/50 | Train Loss: 1.7607, Acc: 0.2922 | Val Loss: 1.6140, Acc: 0.3685
+  -> Saved new best model (val acc: 0.3685)
+Epoch 07/50 | Train Loss: 1.7152, Acc: 0.3191 | Val Loss: 1.5330, Acc: 0.4174
+  -> Saved new best model (val acc: 0.4174)
+Epoch 08/50 | Train Loss: 1.6905, Acc: 0.3366 | Val Loss: 1.4351, Acc: 0.4391
+  -> Saved new best model (val acc: 0.4391)
+Epoch 09/50 | Train Loss: 1.6723, Acc: 0.3441 | Val Loss: 1.4348, Acc: 0.4501
+  -> Saved new best model (val acc: 0.4501)
+Epoch 10/50 | Train Loss: 1.6442, Acc: 0.3541 | Val Loss: 1.4430, Acc: 0.4397
+Epoch 11/50 | Train Loss: 1.6247, Acc: 0.3601 | Val Loss: 1.4347, Acc: 0.4519
+  -> Saved new best model (val acc: 0.4519)
+Epoch 12/50 | Train Loss: 1.5965, Acc: 0.3766 | Val Loss: 1.4170, Acc: 0.4437
+Epoch 13/50 | Train Loss: 1.5650, Acc: 0.3897 | Val Loss: 1.3957, Acc: 0.4518
+Epoch 14/50 | Train Loss: 1.5379, Acc: 0.4003 | Val Loss: 1.3794, Acc: 0.4525
+  -> Saved new best model (val acc: 0.4525)
+Epoch 15/50 | Train Loss: 1.5135, Acc: 0.4079 | Val Loss: 1.3353, Acc: 0.4866
+  -> Saved new best model (val acc: 0.4866)
+Epoch 16/50 | Train Loss: 1.4612, Acc: 0.4391 | Val Loss: 1.3017, Acc: 0.5004
+  -> Saved new best model (val acc: 0.5004)
+Epoch 17/50 | Train Loss: 1.4206, Acc: 0.4548 | Val Loss: 1.2791, Acc: 0.5131
+  -> Saved new best model (val acc: 0.5131)
+Epoch 18/50 | Train Loss: 1.3805, Acc: 0.4728 | Val Loss: 1.2231, Acc: 0.5248
+  -> Saved new best model (val acc: 0.5248)
+Epoch 19/50 | Train Loss: 1.3579, Acc: 0.4854 | Val Loss: 1.2312, Acc: 0.5322
+  -> Saved new best model (val acc: 0.5322)
+Epoch 20/50 | Train Loss: 1.3246, Acc: 0.4955 | Val Loss: 1.1804, Acc: 0.5446
+  -> Saved new best model (val acc: 0.5446)
+Epoch 21/50 | Train Loss: 1.2940, Acc: 0.5052 | Val Loss: 1.1634, Acc: 0.5561
+  -> Saved new best model (val acc: 0.5561)
+Epoch 22/50 | Train Loss: 1.2803, Acc: 0.5080 | Val Loss: 1.1368, Acc: 0.5685
+  -> Saved new best model (val acc: 0.5685)
+Epoch 23/50 | Train Loss: 1.2554, Acc: 0.5172 | Val Loss: 1.1578, Acc: 0.5596
+Epoch 24/50 | Train Loss: 1.2374, Acc: 0.5246 | Val Loss: 1.1575, Acc: 0.5599
+Epoch 25/50 | Train Loss: 1.2224, Acc: 0.5319 | Val Loss: 1.1334, Acc: 0.5702
+  -> Saved new best model (val acc: 0.5702)
+Epoch 26/50 | Train Loss: 1.2061, Acc: 0.5397 | Val Loss: 1.0917, Acc: 0.5802
+  -> Saved new best model (val acc: 0.5802)
+Epoch 27/50 | Train Loss: 1.1979, Acc: 0.5431 | Val Loss: 1.1450, Acc: 0.5616
+Epoch 28/50 | Train Loss: 1.1757, Acc: 0.5469 | Val Loss: 1.0837, Acc: 0.5847
+  -> Saved new best model (val acc: 0.5847)
+Epoch 29/50 | Train Loss: 1.1640, Acc: 0.5510 | Val Loss: 1.1267, Acc: 0.5724
+Epoch 30/50 | Train Loss: 1.1496, Acc: 0.5551 | Val Loss: 1.1241, Acc: 0.5756
+Epoch 31/50 | Train Loss: 1.1346, Acc: 0.5569 | Val Loss: 1.0726, Acc: 0.5914
+  -> Saved new best model (val acc: 0.5914)
+Epoch 32/50 | Train Loss: 1.1357, Acc: 0.5608 | Val Loss: 1.0695, Acc: 0.5956
+  -> Saved new best model (val acc: 0.5956)
+Epoch 33/50 | Train Loss: 1.1221, Acc: 0.5639 | Val Loss: 1.0560, Acc: 0.6023
+  -> Saved new best model (val acc: 0.6023)
+Epoch 34/50 | Train Loss: 1.1004, Acc: 0.5706 | Val Loss: 1.0542, Acc: 0.6041
+  -> Saved new best model (val acc: 0.6041)
+Epoch 35/50 | Train Loss: 1.0899, Acc: 0.5739 | Val Loss: 1.0538, Acc: 0.6013
+Epoch 36/50 | Train Loss: 1.0873, Acc: 0.5746 | Val Loss: 1.0421, Acc: 0.6034
+Epoch 37/50 | Train Loss: 1.0772, Acc: 0.5792 | Val Loss: 1.0603, Acc: 0.5971
+Epoch 38/50 | Train Loss: 1.0816, Acc: 0.5784 | Val Loss: 1.0527, Acc: 0.6028
+Epoch 39/50 | Train Loss: 1.0594, Acc: 0.5801 | Val Loss: 1.0748, Acc: 0.6002
+Epoch 40/50 | Train Loss: 1.0661, Acc: 0.5836 | Val Loss: 1.0272, Acc: 0.6076
+  -> Saved new best model (val acc: 0.6076)
+Epoch 41/50 | Train Loss: 1.0506, Acc: 0.5836 | Val Loss: 1.0495, Acc: 0.6063
+Epoch 42/50 | Train Loss: 1.0387, Acc: 0.5898 | Val Loss: 1.0840, Acc: 0.5943
+Epoch 43/50 | Train Loss: 1.0376, Acc: 0.5923 | Val Loss: 1.0218, Acc: 0.6183
+  -> Saved new best model (val acc: 0.6183)
+Epoch 44/50 | Train Loss: 1.0328, Acc: 0.5935 | Val Loss: 1.0190, Acc: 0.6159
+Epoch 45/50 | Train Loss: 1.0164, Acc: 0.5967 | Val Loss: 1.0263, Acc: 0.6124
+Epoch 46/50 | Train Loss: 1.0103, Acc: 0.5990 | Val Loss: 1.0410, Acc: 0.6133
+Epoch 47/50 | Train Loss: 1.0140, Acc: 0.6004 | Val Loss: 1.0299, Acc: 0.6134
+Epoch 48/50 | Train Loss: 1.0205, Acc: 0.5971 | Val Loss: 1.0220, Acc: 0.6127
+Epoch 49/50 | Train Loss: 0.9979, Acc: 0.6022 | Val Loss: 1.0131, Acc: 0.6213
+  -> Saved new best model (val acc: 0.6213)
+Epoch 50/50 | Train Loss: 1.0039, Acc: 0.6002 | Val Loss: 1.0181, Acc: 0.6199
+
+Done. Best val accuracy: 0.6213
