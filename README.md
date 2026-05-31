@@ -100,6 +100,36 @@ python main.py
 - Attendance is logged automatically to `attendance_log.csv`
 - Press **View Log** to see the full attendance history
 
+## Innovative Features
+
+### Margin Sensitivity Analysis (Jaspreet Singh - Individual Feature)
+
+Investigates how different triplet loss margin values affect face verification
+performance on the validation set. Rather than retraining from scratch at every
+margin value, a post-hoc score scaling approach is used to simulate the effect
+of different margins on the already-trained metric learning model.
+
+Run with:
+
+```bash
+python tune_margin.py
+```
+
+Outputs:
+- `margin_sensitivity.png` - line plot of AUC vs margin value (0.1 to 1.5)
+- `margin_analysis.csv` - full results table
+
+### Live Headcount with Capacity Warning (Adriel - Individual Feature)
+
+Counts all detected faces in each frame and displays a colour-coded badge
+directly on the video feed. A green badge indicates the room is within capacity
+and a red badge appears when the number of faces exceeds the configured limit
+(default: 5). Secondary faces are highlighted with grey bounding boxes. The
+headcount and capacity status are also shown in the info panel alongside
+identity and emotion.
+
+This feature runs automatically as part of `main.py` - no separate script needed.
+
 ## File Overview
 
 | File | Purpose |
@@ -114,4 +144,7 @@ python main.py
 | prepare_fer2013.py | FER2013 dataset folder/CSV preparation |
 | prepare_lcc_fasd.py | LCC FASD liveness dataset preparation |
 | evaluate.py | ROC/AUC evaluation |
-| main.py | Tkinter GUI attendance application |
+| main.py | Tkinter GUI attendance application (includes live headcount feature) |
+| tune_margin.py | Margin sensitivity analysis - individual innovative feature (Jaspreet) |
+| margin_sensitivity.png | Output plot from tune_margin.py |
+| margin_analysis.csv | Output results table from tune_margin.py |
